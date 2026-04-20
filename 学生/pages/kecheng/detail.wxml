@@ -1,0 +1,55 @@
+
+<view wx:if="{{laoshi.img}}" class="mp card bg-gradual-blue">
+   <image src="{{baseimg + laoshi.img}}" class="mpimg1" style="max-width: 40%;" mode="heightFix"></image>
+   <view class="mpv1">
+      <view class="mpname">{{laoshi.name}}</view>
+      <view class="mpline"></view>
+      <view class="mplvsuo"></view>
+      <view class="mpbiaoqian">
+         <text>{{laoshi.phone}}</text>
+      </view>
+   </view>
+</view>
+				          
+                  
+<view class="cu-bar bg-white margin-top">
+  	<view class="action">
+    	<text class="cuIcon-titles text-blue"></text>
+    	<text>当前签到</text>
+  	</view>
+</view>
+
+
+<view class="card zyrc" wx:for="{{qiandao}}" wx:if="{{qiandao.length > 0}}" bindtap="_Qiandao" data-for="{{item.id}}">
+   <view class="zyrctitle">
+     截止时间：{{item.jieshu}}
+   </view>
+   <view class="zyrctime">
+     <image src="../images/qiandao.png"></image>
+     <view>{{item.addtime}}</view>
+   </view>
+</view>
+                
+<view class="cu-bar bg-white margin-top">
+  	<view class="action">
+    	<text class="cuIcon-titles text-blue"></text>
+    	<text>我的签到记录</text>
+  	</view>
+</view>
+             
+
+             
+<view class="cu-timeline">
+  <block wx:for="{{jilu}}">
+    <view data-for="{{item.id}}" class="cu-item text-blue">
+      <view class="bg-gradual-blue content shadow">
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-white text-blue">签到时间</view>
+          <view class="cu-tag line-white">{{item.addtime}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <image src="../images/none.png" class="none" wx:if="{{jilu.length==0}}"></image>
+</view>
+				          

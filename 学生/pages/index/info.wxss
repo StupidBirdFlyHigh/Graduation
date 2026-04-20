@@ -1,0 +1,13 @@
+/* pages/index/info.wxss */
+
+input,textarea{
+  text-align: right;
+}
+
+
+button{
+  width: 60vw !important;
+  margin-top: 100rpx;
+  margin-left: 20vw !important;
+}					
+					

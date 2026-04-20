@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/check",
+    "pages/home/wode",
+    "pages/kecheng/detail",
+    "pages/home/home",
+    "pages/index/login",
+    "pages/logs/logs",
+    "pages/index/info",
+    "pages/wode/mima"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4B5CC4",
+    "navigationBarTitleText": "签到-学生端",
+    "navigationBarTextStyle": "white"
+  },
+  "requiredPrivateInfos": [
+    "choosePoi",
+    "chooseAddress",
+    "getLocation",
+    "onLocationChange",
+    "startLocationUpdate"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息需要被收集"
+    }
+  },
+  "tabBar": {
+    "color": "#ffffff",
+    "selectedColor": "#ffffff",
+    "borderStyle": "black",
+    "backgroundColor": "#4B5CC4",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "课程列表",
+        "iconPath": "pages/images/tabbar/home.png",
+        "selectedIconPath": "pages/images/tabbar/home.png"
+      },
+      {
+        "pagePath": "pages/home/wode",
+        "text": "个人中心",
+        "iconPath": "pages/images/tabbar/wode.png",
+        "selectedIconPath": "pages/images/tabbar/wode.png"
+      }
+    ],
+    "position": "bottom"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

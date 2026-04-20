@@ -1,0 +1,38 @@
+
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <image class="zmyheadimg" src="../images/qiandao.png"></image>
+  <view class='text-content'>
+    <view class='margin-top-sm'>姓名：{{info.name}}</view>
+    <view class='margin-top-sm'>联系方式：{{info.phone}}</view>
+  </view>
+</view>
+
+
+
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+
+  <view class="cu-item arrow">
+    <navigator class="content" url="../index/info?t=c" hover-class="none">
+      <text class="cuIcon-edit text-blue"></text>
+      <text class="text-grey">修改信息</text>
+    </navigator>
+  </view>
+
+  <view class="cu-item arrow">
+    <navigator class="content" url="../wode/mima" hover-class="none">
+      <text class="cuIcon-settingsfill text-purple"></text>
+      <text class="text-grey">修改密码</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content" bindtap="_Exit" hover-class="none">
+      <text class="cuIcon-exit text-red"></text>
+      <text class="text-grey">退出登录</text>
+    </view>
+  </view>
+
+</view>
+
+
+<view class="cu-tabbar-height"></view>		
+					

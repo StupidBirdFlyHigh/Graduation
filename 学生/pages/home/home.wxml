@@ -1,0 +1,37 @@
+<image src="../images/top.jpg" class="none" mode="widthFix"></image>
+
+
+<scroll-view scroll-x scroll-with-animation scroll-left="{{scrollLeft}}" class="bg-white nav">
+  <view class="flex text-center">
+    <view class="cu-item flex-sub {{index==TabCur?'text-blue cur':''}}" wx:for="{{choose.length}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+      {{choose[index]}}
+    </view>
+  </view>
+</scroll-view>
+
+
+<view class="cu-card article">
+  <block wx:for="{{list}}" wx:key="id">
+    <view class="cu-item shadow " data-for="{{item.id}}">
+      <view class="title">
+        <view class="text-cut">{{item.name}}</view>
+      </view>
+      <view class="content">
+        <image src="../images/kecheng.png" mode="aspectFill"></image>
+        <view class="desc">
+          <view class="text-content">
+            <view>上课时间：{{item.shijian}}</view>
+            <view>上课教室：{{item.jiaoshi}}</view>
+            <view>授课老师：{{item.lsname}}</view>
+          </view>
+          <view>
+            <view wx:if="{{TabCur==0}}" data-for="{{item.id}}" data-lid="{{item.lid}}" catchtap="_Chakan" class="cu-tag bg-green round">查看课程</view>
+            <view wx:if="{{TabCur==0}}" data-for="{{item.id}}" catchtap="_Tuichu" class="cu-tag bg-red round">退出课程</view>
+            <view wx:if="{{TabCur==1}}" data-for="{{item.id}}" catchtap="_Jiaru" class="cu-tag bg-green round">加入课程</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <image src="../images/none.png" class="none" wx:if="{{list.length == 0}}"></image>
+</view>

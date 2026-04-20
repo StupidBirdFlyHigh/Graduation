@@ -1,0 +1,416 @@
+
+<!doctype html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>老师</title>
+
+    <!-- Favicon -->
+    <link rel="stylesheet" href="css/default-assets/new/toastr.min.css">
+    <link rel="stylesheet" href="css/default-assets/new/sweetalert-2.min.css">
+
+    <!-- Master Stylesheet [If you remove this CSS file, your file will be broken undoubtedly.] -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        table a{
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- ======================================
+******* Page Wrapper Area Start **********
+======================================= -->
+<div class="ecaps-page-wrapper">
+    <!-- Sidemenu Area -->
+    <div class="ecaps-sidemenu-area">
+        <!-- Desktop Logo -->
+        <div class="ecaps-logo">
+            <a href="#" style="justify-content: center">管理员
+            </a>
+        </div>
+
+        <!-- Side Nav -->
+        <div class="ecaps-sidenav" id="ecapsSideNav">
+            <!-- Side Menu Area -->
+            <div class="side-menu-area">
+                <!-- Sidebar Menu -->
+                <nav>
+                    <ul class="sidebar-menu" data-widget="tree" id="sidebar">
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="ecaps-page-content">
+        <!-- Top Header Area -->
+        <header class="top-header-area d-flex align-items-center justify-content-between">
+            <div class="left-side-content-area d-flex align-items-center">
+                <!-- Mobile Logo -->
+                <div class="mobile-logo mr-3 mr-sm-4">
+                    <a href="#">管理员</a>
+                </div>
+
+                <!-- Triggers -->
+                <div class="ecaps-triggers mr-1 mr-sm-3">
+                    <div class="menu-collasped" id="menuCollasped">
+                        <i class="zmdi zmdi-menu"></i>
+                    </div>
+                    <div class="mobile-menu-open" id="mobileMenuOpen">
+                        <i class="zmdi zmdi-menu"></i>
+                    </div>
+                </div>
+
+                <!-- Left Side Nav -->
+                <ul class="left-side-navbar d-flex align-items-center">
+
+                </ul>
+            </div>
+
+            <div class="right-side-navbar d-flex align-items-center justify-content-end">
+                <!-- Mobile Trigger -->
+                <div class="right-side-trigger" id="rightSideTrigger">
+                    <!--<i class="ti-align-left"></i>-->
+                </div>
+
+                <!-- Top Bar Nav -->
+                <ul class="right-side-content d-flex align-items-center">
+
+
+                </ul>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <div class="card bg-boxshadow full-height">
+                            <div class="card-body">
+                                <h4 class="card-title mb-0">老师 列表</h4>
+                                <button onclick="$('#myModal_add').modal('show')" class="btn btn-success" style="margin: 10px 0"><i class="fa fa-plus"></i>添加</button>
+                                <div class="table-responsive">
+                                    <table class="table layout-table">
+                                        <thead class="bg-success">
+                                        <tr>
+                                            <th class="text-white">账号</th><th class="text-white">密码</th><th class="text-white">姓名</th><th class="text-white">联系方式</th><th class="text-white">照片</th><th class="text-white">创建时间</th><th class="text-white">操作</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="table">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="myModal_add" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">老师 添加</h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-sm-12 col-xs-12">
+                    <div>
+                        
+        <div class="form-group">
+                            <label>账号</label>
+                            <input autocomplete="off" type="text" class="form-control" name="username" >
+                        </div>
+        
+        <div class="form-group">
+                            <label>密码</label>
+                            <input autocomplete="off" type="text" class="form-control" name="password" >
+                        </div>
+        
+        <div class="form-group">
+                            <label>姓名</label>
+                            <input autocomplete="off" type="text" class="form-control" name="name" >
+                        </div>
+        
+        <div class="form-group">
+                            <label>联系方式</label>
+                            <input autocomplete="off" type="text" class="form-control" name="phone" >
+                        </div>
+        
+            <div class="form-group">
+                            <label>照片</label><br>
+                            <img onclick="uptu.up(this)" src="img/addimg.png" data-src="" style="width: 120px;height: 180px;" id="photo_add">
+                        </div>
+            
+
+                        <div style="text-align: center;margin-top: 30px">
+                            <button type="button" class="btn btn-success mr-2" onclick="_tijiao()">提交</button>
+                            <button type="button" class="btn btn-dark" onclick="_chongzhi('add')">重置</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="myModal_bianji" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">老师 编辑</h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-sm-12 col-xs-12">
+                    <div>
+                                                
+        <div class="form-group">
+                            <label>账号</label>
+                            <input autocomplete="off" type="text" class="form-control" name="username" >
+                        </div>
+        
+        <div class="form-group">
+                            <label>密码</label>
+                            <input autocomplete="off" type="text" class="form-control" name="password" >
+                        </div>
+        
+        <div class="form-group">
+                            <label>姓名</label>
+                            <input autocomplete="off" type="text" class="form-control" name="name" >
+                        </div>
+        
+        <div class="form-group">
+                            <label>联系方式</label>
+                            <input autocomplete="off" type="text" class="form-control" name="phone" >
+                        </div>
+        
+            <div class="form-group">
+                            <label>照片</label><br>
+                            <img onclick="uptu.up(this)" src="img/addimg.png" data-src="" style="width: 120px;height: 180px;" id="photo_bianji">
+                        </div>
+            
+
+
+
+                        <div style="text-align: center;margin-top: 30px">
+                            <button type="button" class="btn btn-success mr-2" onclick="_xiugai()">修改</button>
+                            <button type="button" class="btn btn-dark" onclick="_chongzhi('bianji')">重置</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div style="display: none">
+    <input onchange="uptu.tupian(this)" id="tu" accept="image/*" name="img" type="file" multiple>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bundle.js"></script>
+
+<!-- Active JS -->
+<script src="js/default-assets/active.js"></script>
+<script src="js/lrz.all.bundle.js"></script>
+<script src="js/uptu.js"></script>
+<script src="js/mulu.js"></script>
+<script src="js/default-assets/basic-form.js"></script>
+<script src="js/default-assets/toastr.min.js"></script>
+<script src="js/default-assets/sweetalert2.min.js"></script>
+<script src="js/manifest.js"></script>
+</body>
+<script>
+    var uptu=new UpTu();
+
+    _Setmenu('laoshi');
+
+    var json = {};
+    var nowid = 0;
+    var biao = "laoshi";
+
+    const _Getshuju = function(){
+        return new Promise(function(succ,err){
+            s.sb(biao);
+            s.se("order","id");
+            s.g(`c/common_list_status`,{
+                s:function(data){
+                    if(data.code==200){
+                        let info = data.data,html = [];
+                        json = {};
+                        html = info.map(function(obj){
+                            json[obj.id]=obj;
+                            return `
+                           <tr>
+                             <td>${obj.username}</td><td>${obj.password}</td><td>${obj.name}</td><td>${obj.phone}</td><td><img src='${basefile + obj.img}' style='width: 120px'></td><td>${obj.addtime}</td><td><a href="javascript:_bianji('${obj.id}')">修改</a> | <a href="javascript:_shanchu('${obj.id}')">删除</a></td>
+                           </tr>
+                           `
+                        });
+                        document.getElementById('table').innerHTML=html.join('');
+                        succ();
+                    }
+                },
+                e:function(e){
+
+                }
+            })
+        })
+    };
+	
+	//从API、数据库获取数据，并将这些数据以表格的形式展示在页面上。同时，它还为每个表格行提供了编辑和删除的操作链接。
+
+    
+	
+	
+	
+	_Getshuju(); //数据的提交与更新
+
+    const _tijiao = function(){
+        let input = ipt.getshuru('myModal_add','all'); //获取用户输入的数据
+        if(ipt.checkinput(input)){ //验证输入的数据是否有效。如果验证失败，函数可能直接返回，不执行后续操作。
+            let nr = ZY.MaptoJson(ipt.gettext(input));
+            
+            let img = document.getElementById('photo_add');
+            if(img.dataset.src == ''){
+                toastr.error('请上传图片');
+                return;
+            }
+            s.se('img',img.dataset.src);
+            
+            s.sj(nr);
+            s.sb(biao);
+            s.g('c/info_charu',{
+                s:function(data){
+                    if(data.code==200){
+                        toastr.success('新增成功');
+                        _chongzhi('add');
+                        _Getshuju();
+                        ipt.clearinput(input);
+                        $("#myModal_add").modal('hide');
+                    }else{
+                        toastr.error('新增失败');
+                    }
+                },
+                e:function(e){
+                    toastr.error('网络错误');
+                }
+            })
+        }
+    };
+
+    const _bianji = function(id){
+        nowid = id;
+        let info = json[id];
+        let input = ipt.getshuru('myModal_bianji','all');
+        ipt.setinput(input).setall(info,'json');
+        let img = document.getElementById('photo_bianji');
+        img.src = basefile + info.img;
+        img.setAttribute('data-src',info.img);
+        $("#myModal_bianji").modal('show');
+    };
+
+    const _xiugai = function(){
+        let input = ipt.getshuru('myModal_bianji','all');
+        if(ipt.checkinput(input)){
+            let nr = ZY.MaptoJson(ipt.gettext(input));
+            
+            let img = document.getElementById('photo_bianji');
+            if(img.dataset.src == ''){
+                toastr.error('请上传图片');
+                return;
+            }
+            s.se('img',img.dataset.src);
+            
+            s.sj(nr);
+            s.se('id',nowid);
+            s.sb(biao);
+            s.g('c/info_xiugai',{
+                s:function(data){
+                    if(data.code==200){
+                        toastr.success('修改成功');
+                        _Getshuju();
+                        $("#myModal_bianji").modal('hide');
+                    }else{
+                        toastr.error('修改失败');
+                    }
+                },
+                e:function(e){
+                    toastr.error('网络错误');
+                }
+            })
+        }
+    };
+
+
+
+    const _chongzhi = function(t){
+        let input = ipt.getshuru('myModal_'+t,'all');
+        ipt.clearinput(input);
+        
+        let tu = document.getElementById('photo_'+t);
+        tu.src = "img/addimg.png";
+        tu.setAttribute('data-src','');
+        
+    };
+
+    const _shanchu = function(id){
+        tm('是否确认删除?',function(){
+            s.se('id',id);
+            s.sb(biao);
+            s.g('c/common_delete_status',{
+                s:function(data){
+                    if(data.code==200){
+                        _Getshuju();
+                        ts('删除成功');
+                    }else{
+                        te('删除失败');
+                    }
+                },
+                e:function(e){
+                    tw('网络错误');
+                }
+            })
+        })
+    };
+
+
+</script>
+</html>
+    
+    

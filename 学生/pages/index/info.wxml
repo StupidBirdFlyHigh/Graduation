@@ -1,0 +1,22 @@
+
+<view class="cu-bar bg-white solid-bottom">
+  <view class='action'>
+    <text class='cuIcon-titles text-orange '></text> 个人信息
+  </view>
+</view>
+<view class="cu-form-group margin-top">
+  <view class="title">姓名</view>
+  <input placeholder="输入你的姓名" data-name="name" bindinput="_Form" value="{{info.name}}"></input>
+</view>
+<view class="cu-form-group">
+  <view class="title">学号</view>
+  <input placeholder="输入你的学号" data-name="xuehao" bindinput="_Form" value="{{info.xuehao}}"></input>
+</view>
+<view class="cu-form-group">
+  <view class="title">手机号</view>
+  <input placeholder="请输入你的手机号" data-name="phone" bindinput="_Form" value="{{info.phone}}"></input>
+</view>
+
+
+<button bindtap="_Queding" class="cu-btn bg-olive round shadow">确定</button>				
+					

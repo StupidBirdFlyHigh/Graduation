@@ -1,0 +1,12 @@
+
+<view class="cu-form-group margin-top">
+  <view class="title">输入新密码</view>
+  <input placeholder="新密码" data-name="password" bindinput="_Form" value="{{info.password}}"></input>
+</view>
+<view class="cu-form-group">
+  <view class="title">重复密码</view>
+  <input placeholder="重复密码" data-name="password2" bindinput="_Form" value="{{info.password2}}"></input>
+</view>
+
+<button bindtap="_Xiugai" class="cu-btn bg-olive round shadow">修改</button>					
+					

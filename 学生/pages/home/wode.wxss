@@ -1,0 +1,33 @@
+
+.zkapian2{
+  width:92vw;
+  margin-left: 4vw;
+  background-color: white;
+  border-radius: 20rpx;
+  padding:40rpx 30rpx;
+  margin-top: 30rpx;
+}
+
+.zkapian2 .title{
+  border-left:5px solid #4B5CC4;
+  font-size: 35rpx;
+  padding-left: 20rpx;
+}
+
+.zkapian2 .fenshu{
+  color:#4B5CC4;
+  font-size: 200rpx;
+  font-weight: bold;
+  text-align: center;
+}
+
+.zkapian2 .fenshu text{
+  font-size: 30rpx !important;
+  font-weight: 400 !important;
+  color:black !important;
+  margin-left: 20rpx;
+}
+
+.zkapian2 .fenxi{
+  font-size: 34rpx;
+}

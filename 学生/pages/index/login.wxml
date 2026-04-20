@@ -1,0 +1,20 @@
+
+<view class="v1">
+  <view>签到小程序-学生端</view>
+  <view>第一次登录视为注册</view>
+</view>
+
+<view class="v2">
+  <view class="v3">
+    <image src="../images/login/username.png"></image>
+    <input bindinput="_Form" data-name='username' value="{{info.username}}" placeholder="输入账号"></input>
+  </view>
+
+  <view class="v3" style="border-bottom:none;">
+    <image src="../images/login/password.png"></image>
+    <input bindinput="_Form" data-name='password' value="{{info.password}}" placeholder="输入密码"></input>
+  </view>
+
+  <view bindtap="_Login" class="anniu">登录/注册</view>
+</view>					
+					
